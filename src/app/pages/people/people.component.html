@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col" *ngFor="let person of people">
-      <app-person [personInfo]="person"></app-person>
+      <app-person (viewMore)="viewMoreListener($event)" [personInfo]="person"></app-person>
     </div>
   </div>
 </div>

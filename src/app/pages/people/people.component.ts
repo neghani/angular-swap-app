@@ -21,7 +21,13 @@ export class PeopleComponent implements OnInit {
       .subscribe((res: any) => {
         this.data = res;
         this.people = res.results;
-        console.log( this.people)
+        this.people[3].viewMore = true;
+        console.log(this.people);
       });
+  }
+  viewMoreListener(data:any){
+    console.log("dd")
+    console.log(data)
+
   }
 }
